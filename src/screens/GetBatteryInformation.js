@@ -7,7 +7,6 @@ const GetBatteryInformation = () => {
 
     useEffect(() => {
         const PowerSavingModeModule = NativeModules.PowerSavingModeModule;
-        console.log('PowerSavingModeModule==',PowerSavingModeModule)
         PowerSavingModeModule.isPowerSavingModeEnabled()
             .then(isEnabled => {
                 setIsPowerSavingModeEnabled(isEnabled);
